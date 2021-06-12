@@ -4,6 +4,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 import {UserContext} from '~/Context/User';
 
+import LoadingScreen from '~/Screens/LoadingScreen';
 import AuthScreen from '~/Screens/AuthScreen';
 import FeedScreen from '~/Screens/FeedScreen';
 
@@ -41,10 +42,15 @@ const FeedNavigator = () => {
 };
 
 export default () => {
-  const {userInfo} = useContext<IUserContext>(UserContext);
+  const {isLoading, userInfo} = useContext<IUserContext>(UserContext);
+
+  if (isLoading === false) {
+    return <LoadingScreen />;
+  }
+
   return (
     <NavigationContainer>
-      {userInfo ? <AuthNavigator /> : <FeedNavigator />}{' '}
+      {userInfo ? <FeedNavigator /> : <AuthNavigator />}
     </NavigationContainer>
   );
 };

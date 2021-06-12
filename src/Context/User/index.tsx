@@ -19,10 +19,16 @@ const UserContextProvider = ({children}: Props) => {
   const [userInfo, setUserInfo] = useState<IUserInfo | undefined>(undefined);
   const [isLoading, setItLoading] = useState<boolean>(false);
 
-  const signUp = (email: string, password: string) => {};
-  const logIn = (email: string, password: string) => {};
+  const signUp = (email: string, password: string) => {
+    console.log('sign up!');
+  };
+  const logIn = (email: string, password: string) => {
+    console.log('log in!');
+  };
   const logOut = () => {};
-  const getUserInfo = () => {};
+  const getUserInfo = () => {
+    setItLoading(true);
+  };
 
   useEffect(() => {
     getUserInfo();
