@@ -32,19 +32,17 @@ interface Props {
 }
 
 const AuthScreen = ({navigation}: Props) => {
-  const {signUp, logIn} = useContext<IUserContext>(UserContext);
+  const {error, signUp, logIn} = useContext<IUserContext>(UserContext);
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [isLogin, setIsLogin] = useState<boolean>(true);
-  const [error, setError] = useState<string>('');
+  //const [error, setError] = useState<string>('');
 
   const onChangeEmail = (value: string) => {
     setEmail(value);
-    setError('');
   };
   const onChangePassword = (value: string) => {
     setPassword(value);
-    setError('');
   };
 
   return (
@@ -70,13 +68,7 @@ const AuthScreen = ({navigation}: Props) => {
           onPress={
             isLogin
               ? () => {
-                  if (!email) {
-                    setError('이메일을 입력하세요.');
-                  } else if (!password) {
-                    setError('비밀번호를 입력하세요.');
-                  } else {
-                    logIn(email, password);
-                  }
+                  logIn(email, password);
                 }
               : () => {
                   signUp(email, password);

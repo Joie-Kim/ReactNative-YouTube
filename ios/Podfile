@@ -12,6 +12,8 @@ target 'Rntube' do
     :hermes_enabled => false
   )
 
+  pod 'react-native-config', :path => '../node_modules/react-native-config'
+
   target 'RntubeTests' do
     inherit! :complete
     # Pods for testing
