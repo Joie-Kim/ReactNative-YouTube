@@ -1,5 +1,9 @@
 # RnTube
 
+|                                                                      Auth Screen                                                                      |                                                                      Feed Screen                                                                      |
+| :---------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------: |
+| <img width="415" alt="Rntube_authScreen" src="https://user-images.githubusercontent.com/61102301/122068780-a7447b80-ce2f-11eb-8b3e-9c97762715fd.png"> | <img width="410" alt="Rntube_feedScreen" src="https://user-images.githubusercontent.com/61102301/122068805-aad80280-ce2f-11eb-9198-0a8d7ae2f1db.png"> |
+
 ## 💡 About
 
 ### Subject
