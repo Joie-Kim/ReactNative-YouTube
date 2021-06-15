@@ -1,11 +1,11 @@
 interface IUserInfo {
-  email: string;
-  name: string;
+  uid: string;
+  name: string | null;
 }
 
 interface IUserContext {
   isLoading: boolean;
-  userInfo: IUserInfo | undefined;
+  userInfo: IUserInfo | null;
   error: string;
   signUp: (email: string, password: string) => void;
   logIn: (email: string, password: string) => void;

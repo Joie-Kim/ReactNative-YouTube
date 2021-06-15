@@ -31,7 +31,7 @@ interface Props {
   navigation: NavigationProp;
 }
 
-const AuthScreen = ({navigation}: Props) => {
+const AuthScreen = () => {
   const {error, signUp, logIn} = useContext<IUserContext>(UserContext);
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');

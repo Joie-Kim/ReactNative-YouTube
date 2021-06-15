@@ -35,7 +35,17 @@ const FeedNavigator = () => {
       <Stack.Screen
         name="FeedScreen"
         component={FeedScreen}
-        options={{gestureEnabled: false}}
+        options={{
+          title: 'Video List',
+          headerTintColor: '#E70915',
+          headerStyle: {
+            backgroundColor: '#141414',
+            borderBottomWidth: 0,
+          },
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}
       />
     </Stack.Navigator>
   );
