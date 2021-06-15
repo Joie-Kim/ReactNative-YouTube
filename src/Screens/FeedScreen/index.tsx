@@ -3,6 +3,8 @@ import React, {useContext, useLayoutEffect} from 'react';
 import Styled from 'styled-components/native';
 import {UserContext} from '~/Context/User';
 
+import PlayerList from '~/Components/PlayerList';
+
 const Container = Styled.SafeAreaView`
   flex: 1;
   background-color: #141414;
@@ -34,7 +36,11 @@ const Feeds = ({navigation}: Props) => {
       ),
     });
   });
-  return <Container />;
+  return (
+    <Container>
+      <PlayerList />
+    </Container>
+  );
 };
 
 export default Feeds;
